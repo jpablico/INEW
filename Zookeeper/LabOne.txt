@@ -1,0 +1,23 @@
+In this lab you will be creating a basic Express app.
+
+1). You will need to create a project folder and create inside that folder a .js file named app.js. When you turn this lab in you will need to zip the project folder with all the files and folders of your project in that project folder.
+
+2). Create a node js project with a package.json file. The name of your app project in the .json file should be zookeeper
+
+3). Add express.js to your project 
+
+4). Setup the app.js file to use express, have a server/host location of 3000 (if you need to use another localhost port, you will need to include the different port in the comment line when you submit.
+
+5). The 'home' page content will include an <h1> for ZooKeeper and you will need to add in the send an <h3> of Keeping Track of All Our Critters, and a <p> giving a brief 1-2 paragraph on the apps purpose (your choice as long as it relates to zoo or people who look after zoos.
+
+6). Make sure you test using localhost that this is showing your 'home' content!
+
+7). Add a 'page' (/about) with the <h1> of About Us, and a short <p> (your content--1-2 paragraphs) about a fictional Zoo Keeper/Zoo organization.
+
+8). Add another 'page' (/favorites) with an <h1> of Zoo Favorites and add a ul list with 10 items showing the current favorite animals in zoos.
+
+Bonus: +5 points
+
+Add a page (/survey) with an <h1>Favorite Zoo Animal Survey</h1> and create a form (as in the practice example) with /results, POST, name (fav_vote) and have a text input with a button submit. Then use (/results) route to 'catch' the the inputted value in a console log. Don't forget to add the urlencoded to be able to see the input as text in the console message (step 10-12 in the practice)
+
+Zip and upload!
