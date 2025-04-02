@@ -1,0 +1,28 @@
+{
+  "name": "manatee-friendos",
+  "version": "1.0.0",
+  "description": "Friends of the Manatee - Lab",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "manatee",
+    "community",
+    "express",
+    "mongodb"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^7.8.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
