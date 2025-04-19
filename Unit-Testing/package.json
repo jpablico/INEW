@@ -1,0 +1,32 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha --require @babel/register tests/*.js --exit",
+    "dev": "nodemon --exec npx babel-node ./server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/register": "^7.25.9",
+    "chai": "^5.2.0",
+    "chai-http": "^5.1.1",
+    "mocha": "^11.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
