@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/stars.js"></script>
+</head>
+<body class="bg-animation">
+
+  <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+
+  <div class="container">
+    <header>
+      <h1><%= title %></h1>
+      <form action="/search" method="GET" class="search-form">
+        <input type="text" name="query" placeholder="Search NASA images..." required>
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <% if (error) { %>
+        <div class="error-message">
+          <p><%= error %></p>
+        </div>
+      <% } %>
+
+      <% if (images && images.length > 0) { %>
+        <div class="nasa-images">
+          <% images.forEach(image => { %>
+            <div class="image-item">
+              <h2><%= image.title %></h2>
+              <% if (image.date) { %>
+                <div class="image-date"><%= image.date %></div>
+              <% } %>
+              <div class="image-container">
+                <img src="<%= image.imageUrl %>" alt="<%= image.title %>">
+              </div>
+              <% if (image.description) { %>
+                <p class="image-description"><%= image.description %></p>
+              <% } %>
+            </div>
+          <% }); %>
+        </div>
+      <% } else if (!error) { %>
+        <div class="no-images">
+          <p>No images found. Please try again later.</p>
+        </div>
+      <% } %>
+    </main>
+
+    <footer>
+      <p>NASA Image Scraper - Data from NASA's Image of the Day</p>
+      <p class="disclaimer">This is an educational project. All content belongs to NASA.</p>
+    </footer>
+  </div>
+</body>
+</html>
